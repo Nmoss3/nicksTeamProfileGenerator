@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const style = require("./dist/style.css");
+const generatePage = require("./src/page-template");
+const { writeFile, copyFile } = require("./utils/generate-site");
 
 const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
@@ -140,4 +141,21 @@ function addIntern() {
     });
 }
 
-welcomePrompt();
+function fullTeam() {
+  console.log("This is your team!");
+}
+
+welcomePrompt()
+  .then((templateData) => {
+    return generatePage(templateData);
+  })
+  .then((writeFileResponse) => {
+    console.log(writeFileResponse);
+    return copyFile();
+  })
+  .then((copyFileResponse) => {
+    console.log(copyFileResponse);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
