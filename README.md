@@ -4,6 +4,10 @@
 
 Applicationd does not yet fully function. It does not generate an HTML page nor does the template hold style.
 
+## Installation
+
+npm install after cloning repository.
+
 ## Dependencies
 
 Node.js
@@ -38,6 +42,12 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
 ## Tests
+
+![Untitled_ Apr 11, 2021 11_46 PM](https://user-images.githubusercontent.com/75024930/114353125-80ad5000-9b21-11eb-886e-417e33ec69fe.gif)
+
+## Image of Planned HTML
+
+![plannedHTML](https://user-images.githubusercontent.com/75024930/114352416-b271e700-9b20-11eb-8c49-7920885eb880.PNG)
 
 ## Created By
 
