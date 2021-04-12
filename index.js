@@ -145,17 +145,4 @@ function fullTeam() {
   console.log("This is your team!");
 }
 
-welcomePrompt()
-  .then((templateData) => {
-    return generatePage(templateData);
-  })
-  .then((writeFileResponse) => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then((copyFileResponse) => {
-    console.log(copyFileResponse);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+welcomePrompt();
